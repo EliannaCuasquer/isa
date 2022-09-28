@@ -1,0 +1,80 @@
+<div id="page" class="container-fluid ">
+    
+    <div class="container outercont">
+        <div id="page-content" class="row-fluid">
+            <div id="page-navbar" class="span12">
+                <nav class="breadcrumb-button"></nav>
+                <ul class="breadcrumb">
+                    <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                    <span class="separator"><i class="fa-angle-right fa"></i></span>
+                    <li>
+                        <span tabindex="0">Iniciar sesión en el sitio</span>
+                    </li>
+                </ul>
+            </div>        
+            <section id="region-main" class="span12">
+                <span class="notifications" id="user-notifications"></span>
+                <div role="main">
+                    <span id="maincontent"></span>
+                    <div class="loginbox clearfix twocolumns">
+                        <div class="loginpanel">
+                            <h2>Listado Proyecto</h2>
+                            <table class="styled-table"> 
+                                <thead > 
+                                    <tr> 
+                                        <th>Nombre Proyecto</th> 
+                                        <th></th> 
+                                    </tr> 
+                                </thead> 
+                                <tbody> 
+                                    <tr *ngFor="let item of proList$|async; let i=index">
+                                        <td>{{item.nomproy}}</td> 
+                                        <td>
+                                            <select>
+                                                
+                                                <option disabled selected> Seleccione Docente</option>
+                                                <option  *ngFor="let item2 of docList$|async" > 
+                                                    {{item2.nomdoc}}&nbsp;{{item2.apedoc}} 
+                                                </option>
+                                            </select>
+                                            <button class="btn btn-success" 
+                                                    type="submit"
+                                                    (click)="modProy(item)">
+                                                <i class="fa fa-add"></i>
+                                                Asignar Asesor
+                                            </button>
+                                        </td>
+                                    </tr> 
+                                    
+                                </tbody> 
+                            </table>
+                        </div>
+                    </div>        
+                </div>    
+            </section>
+        </div>
+    </div>
+    <div class="container outercont">
+        <div id="page-content" class="row-fluid">
+            <div id="page-navbar" class="span12">
+                <nav class="breadcrumb-button"></nav>
+                <ul class="breadcrumb">
+                    <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                    <span class="separator">
+                        <i class="fa-angle-right fa"></i>
+                    </span>
+                    <li>
+                        <span tabindex="0">Iniciar sesión en el sitio</span>
+                    </li>
+                </ul>
+            </div>        
+            <section id="region-main" class="span12">
+                <span class="notifications" id="user-notifications"></span>
+                <div role="main">
+                    <span id="maincontent"></span>
+                    <div class="loginbox clearfix twocolumns"></div>
+                </div>
+            </section>
+        </div>        
+    </div>
+</div>

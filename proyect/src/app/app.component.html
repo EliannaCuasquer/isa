@@ -1,0 +1,98 @@
+<header id="page-header-wrapper"  >
+    <div id="above-header">
+        <div class="clearfix container userhead">
+            <div class="pull-left">
+                <ul class="usermenu2 nav navbar-nav navbar-right"></ul>            
+            </div>
+
+            <div style="float: right; position: relative; display: inline; margin-left: 15px; height:20px;">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown langmenu">
+                        <a href="https://aulavirtual.udenar.edu.co/login/index.php" class="dropdown-toggle" data-toggle="dropdown" title="Idioma">
+                            <i class="fa fa-globe fa-lg"></i>
+                            <span class="langdesc">Español - Internacional ‎(es)‎</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a title="English ‎(en)‎" href="https://aulavirtual.udenar.edu.co/login/index.php?lang=en">English ‎(en)‎</a>
+                            </li>
+                            <li>
+                                <a title="Español - Internacional ‎(es)‎" href="https://aulavirtual.udenar.edu.co/login/index.php?lang=es">Español - Internacional ‎(es)‎</a>
+                            </li>
+                        </ul>
+                    </li>    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div id="page-header" class="clearfix container">
+
+        <div id="logocontainer">
+            <a href="https://aulavirtual.udenar.edu.co/">
+                <img src="https://aulavirtual.udenar.edu.co/pluginfile.php?file=%2F1%2Ftheme_adaptable%2Flogo%2F1661271431%2Fescudos-udenar-2017_LOGOcoes.png" id="logo" />
+            </a>
+        </div><div id="sitetitle">
+        <p>Trabajos de Grado</p></div>
+        <br>
+        <br>
+        <div id="course-header"></div>
+    </div>
+
+    <div id="navwrap">
+        <div class="container">
+            <div class="navbar">
+                <nav role="navigation" class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <div class="nav-collapse collapse ">
+                            <ul class="nav navbar-nav"></ul>                            
+                            
+                            <ul class="nav navbar-nav"><li class="dropdown"><a href="#cm_submenu_3" class="dropdown-toggle" data-toggle="dropdown" title="Ayuda">Estudiante</a>
+                                <ul class="dropdown-menu">
+                                    <li><a title="Estudiante" routerLink="/est/nuevo">Registar</a></li>
+                                    <li><a title="Estudiante" routerLink="/proyt">Registar Proyecto</a></li>
+                                    <li><a title="Estudiante" routerLink="/contest">Consultar Aseror y Jurados</a></li>
+                                
+                                </ul>
+                            </ul>
+
+                            <ul class="nav navbar-nav"><li class="dropdown"><a href="#cm_submenu_3" class="dropdown-toggle" data-toggle="dropdown" title="Ayuda">Docente</a>
+                                <ul class="dropdown-menu">
+                                    <li><a title="modocente" routerLink="/ests">Listar Estudiantes</a></li>
+                                    <li><a title="modocente" routerLink="/doc/nuevo">Registar</a></li>
+                                    <li><a title="listest" routerLink="/docs">Listar Docentes</a></li>
+                                    
+                                    
+                                
+                                </ul>
+                            </ul>  
+                            <ul class="nav navbar-nav"><li class="dropdown"><a href="#cm_submenu_3" class="dropdown-toggle" data-toggle="dropdown" title="Ayuda">Administrativo</a>
+
+
+                                <ul class="dropdown-menu">
+                                    <li><a title="modocente" routerLink="/ests">Listar Estudiantes</a></li>
+                                    <li><a title="listest" routerLink="/docs">Listar Docentes</a></li>
+                                    <li><a title="modocente" routerLink="/admin/nuevo">Registar</a></li>
+                                    <li><a title="modocente" routerLink="/pryts">Proyectos</a></li>
+                                
+                                </ul>
+                            </ul> 
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header> 
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+

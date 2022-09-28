@@ -1,0 +1,87 @@
+<div id="page" class="container-fluid   ">
+
+
+
+<div class="container outercont">
+    <div id="page-content" class="row-fluid">
+        <div id="page-navbar" class="span12">
+            <nav class="breadcrumb-button"></nav>
+            <ul class="breadcrumb">
+                <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                <span class="separator">
+                    <i class="fa-angle-right fa"></i>
+                </span>
+                <li>
+                    <span tabindex="0">Iniciar sesión en el sitio</span>
+                </li>
+            </ul>
+        </div>        
+        <section id="region-main" class="span12">
+            <span class="notifications" id="user-notifications"></span>
+            <div role="main">
+                <span id="maincontent"></span>
+                <div class="loginbox clearfix twocolumns">
+                <div class="loginpanel">
+                    <h2>Registro Proyecto</h2>
+                    <div class="subcontent">
+                        <form action="po" 
+                              method="post" 
+                              id="login" 
+                              (ngSubmit)="guardar( f )"
+                              #f="ngForm">
+                            <div class="form-group">
+                                <div>
+                                    <label for="idEst">Cedula del Estudiante</label>           
+                                    <input type="number" 
+                                        name="idEst"
+                                        [(ngModel)]="proy.idest" 
+                                        id="userced" 
+                                        size="20" 
+                                        autocomplete="username" 
+                                        required> 
+                                </div>
+                                <div class="form-label">
+                                        <label for="username">Nombre proyecto</label>
+                                        <input  type="text" 
+                                                name="username"
+                                                [(ngModel)]="proy.nomproy" 
+                                                id="usernom" 
+                                                size="20" 
+                                                autocomplete="username"
+                                                required>
+                                        
+                                </div>
+
+                                <p>
+                                    <label for="archivosubido">Sube un archivo:</label>
+                                    <input  type="file" 
+                                            name="archivosubido"  
+                                            [(ngModel)]="proy.archivoproy"
+                                            >
+                                </p>
+                            </div>
+                            <div class="clearer"><!-- --></div>
+                            <div class="clearer"><!-- --></div>
+                            <input id="anchor" type="hidden" name="anchor" value="" /> 
+                            <input type="hidden" name="logintoken" value="EHH6dGFIXk5EY2j7HbOMQ6UR6EPn3JSd">
+                            <input type="submit" id="loginbtn" value="Registrar" />   
+                        </form>
+                        <div class="desc">
+                            <span class="helptooltip"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="signuppanel">
+                    <div class="text-center">
+                        <img src="https://img.freepik.com/vector-gratis/concepto-evaluacion-credito-dibujado-mano-documentos_23-2149154259.jpg?w=2000" height="235" width="235">  
+    
+                    </div>
+                </div>
+                </div>
+            </div>        
+        </section>
+    </div>
+</div>
+</div>
+

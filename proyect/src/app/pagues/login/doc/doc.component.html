@@ -1,0 +1,118 @@
+<div id="page" class="container-fluid   ">
+    
+    <div class="container outercont">
+        <div id="page-content" class="row-fluid">
+            <div id="page-navbar" class="span12">
+                <nav class="breadcrumb-button"></nav>
+                <ul class="breadcrumb">
+                    <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                    <span class="separator">
+                        <i class="fa-angle-right fa"></i>
+                    </span>
+                    <li>
+                        <span tabindex="0">Iniciar sesión en el sitio</span>
+                    </li>
+                </ul>
+            </div>        
+            <section id="region-main" class="span12">
+                <span class="notifications" id="user-notifications"></span>
+                <div role="main">
+                    <span id="maincontent"></span>
+                    <div class="loginbox clearfix twocolumns">
+                        <div class="loginpanel">
+                            <h2>Registro Docente</h2>
+                            <div class="subcontent">
+                                <form (ngSubmit)="guardar( f )"
+                                      #f="ngForm">
+                                    <div class="loginfor">
+                                        <div class="form-group">
+                                            <label for="username">Cedula</label>           
+                                            <input type="number" 
+                                                   name="userdname"
+                                                   [(ngModel)]="doc.iddoc" 
+                                                   id="userced" 
+                                                   size="20"  
+                                                   autocomplete="username"
+                                                   required>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Codigo</label>         
+                                            <input type="number" 
+                                                   name="userdname"
+                                                   [(ngModel)]="doc.coddoc" 
+                                                   id="usercod" 
+                                                   size="20" 
+                                                   autocomplete="username"
+                                                   required>
+                                             
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="username">Nombre</label>
+                                                <input type="text" 
+                                                       name="userdname"
+                                                       [(ngModel)]="doc.nomdoc" 
+                                                       id="usernom" 
+                                                       size="20" 
+                                                       autocomplete="username"
+                                                       required>
+                                                
+                                        </div>        
+                                        <div class="form-group">
+                                                <label for="username">Apellido</label>
+                                                <input type="text" 
+                                                       name="userdname"
+                                                       [(ngModel)]="doc.apedoc"
+                                                       id="userape" 
+                                                       size="20" 
+                                                       autocomplete="username"
+                                                       required>
+                                                
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Contraseña</label>
+                                                <input type="password" 
+                                                       name="password" 
+                                                       id="password"
+                                                       [(ngModel)]="doc.pawdoc" 
+                                                       size="20" 
+                                                       autocomplete="current-password"
+                                                       required>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fa fa-save"></i>
+                                            Registrar Docente
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="desc">
+                                    <span class="helptooltip"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signuppanel">
+                            <h2>Registrarse como usuario</h2>
+                            <div class="subcontent">
+                                <p>Para registrarse siga los siguientes pasos:</p>
+                                <p>
+                                    1. Ingrese a
+                                    <a href="https://educaciontic.udenar.edu.co/index.php/solicitud-de-registro-en-el-aula-virtual/" target="_blank" rel="noreferrer noopener">
+                                        <b>Solicitud de registro en el Aula Virtual</b>
+                                    </a>
+                                </p>
+                                <p>2. Llene los datos solicitados según como corresponda. Si su solicitud es enviada de Lunes a Viernes entre 8am hasta las 6pm, le llegará un correo con sus credenciales de acceso en las siguientes horas laborarles. Por favor sea paciente.</p>
+                                <p>
+                                    <span style="font-size:14.44px;">3. Si tiene alguna dificultad, envíe un correo a educacion.tic@udenar.edu.co o llame al 7 24 43 09 ext 2020.</span>
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+            </section>
+        </div>
+    </div>
+</div>        

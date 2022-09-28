@@ -1,0 +1,96 @@
+<div id="page" class="container-fluid ">
+    
+    <div class="container outercont">
+        <div id="page-content" class="row-fluid">
+            <div id="page-navbar" class="span12">
+                <nav class="breadcrumb-button"></nav>
+                <ul class="breadcrumb">
+                    <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                    <span class="separator"><i class="fa-angle-right fa"></i></span>
+                    <li>
+                        <span tabindex="0">Iniciar sesión en el sitio</span>
+                    </li>
+                </ul>
+            </div>        
+            <section id="region-main" class="span12">
+                <span class="notifications" id="user-notifications"></span>
+                <div role="main">
+                    <span id="maincontent"></span>
+                    <div class="loginbox clearfix twocolumns">
+                        <div class="loginpanel">
+                            <h2>Editar Docente</h2>
+                            <div>
+                                <form >
+                                    <p>
+                                        Editar por Id: 
+                                        <input type="number" 
+                                            name="busquedacodigo"
+                                            [(ngModel)]="id" 
+                                            size="4" 
+                                            maxlength="4">
+                                        <button type="submit" class="btn btn-success" [routerLink]="['/edoc',id]">
+                                            <i class="fa fa-pen"></i>
+                                            Editar 
+                                        </button>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="loginpanel">
+                            <h2>Listado Docentes</h2>
+                            <table class="styled-table"> 
+                                <thead > 
+                                    <tr> 
+                                        <th>Codigo</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th> 
+                                        <th>Rol</th>  
+                                        <th></th> 
+                                    </tr> 
+                                </thead> 
+                                <tbody> 
+                                    <tr *ngFor="let item of docList$|async"> 
+                                        <td>{{item.coddoc}}</td>
+                                        <td>{{item.nomdoc}}</td> 
+                                        <td>{{item.apedoc}}</td> 
+                                        <td>{{item.roldoc}}</td> 
+                                        <td>
+                                            <button class="btn-login" 
+                                                    type="submit"
+                                                    (click)="deleteDoc(item)">
+                                                <i class="fa fa-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr> 
+                                </tbody> 
+                            </table>
+                        </div>
+                    </div>        
+                </div>    
+            </section>
+        </div>
+    </div>
+    <div class="container outercont">
+        <div id="page-content" class="row-fluid">
+            <div id="page-navbar" class="span12">
+                <nav class="breadcrumb-button"></nav>
+                <ul class="breadcrumb">
+                    <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                    <span class="separator">
+                        <i class="fa-angle-right fa"></i>
+                    </span>
+                    <li>
+                        <span tabindex="0">Iniciar sesión en el sitio</span>
+                    </li>
+                </ul>
+            </div>        
+            <section id="region-main" class="span12">
+                <span class="notifications" id="user-notifications"></span>
+                <div role="main">
+                    <span id="maincontent"></span>
+                    <div class="loginbox clearfix twocolumns"></div>
+                </div>
+            </section>
+        </div>        
+    </div>
+</div>    

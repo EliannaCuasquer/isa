@@ -1,0 +1,125 @@
+
+<div id="page" class="container-fluid   ">
+       
+        <div class="container outercont">
+            <div id="page-content" class="row-fluid">
+                    <div id="page-navbar" class="span12">
+                        <nav class="breadcrumb-button"></nav>
+                        <ul class="breadcrumb">
+                            <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                            <span class="separator">
+                                <i class="fa-angle-right fa"></i>
+                            </span>
+                            <li><span tabindex="0">Iniciar sesión en el sitio</span></li>
+                        </ul>
+                    </div>        
+                    <section id="region-main" class="span12">
+                        <span class="notifications" id="user-notifications"></span>
+                        <div role="main"><span id="maincontent"></span>
+                            <div class="loginbox clearfix twocolumns">
+                                <div class="loginpanel">
+                                    <h2>Registro Estudiante</h2>
+                                    <div class="subcontent">
+                                        <form (ngSubmit)="guardar( f )"
+                                              #f="ngForm">
+                                           
+                                            <div class="form-group">
+                                                <label for="username">Cedula</label>           
+                                                <input type="number" 
+                                                       name="userename"
+                                                       [(ngModel)]="est.idest" 
+                                                       id="userced" 
+                                                       size="20" 
+                                                       autocomplete="username" 
+                                                       required>
+                                                 
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="username">Codigo</label>           
+                                                <input type="number" 
+                                                       name="userename"
+                                                       [(ngModel)]="est.codest"  
+                                                       id="usercod" 
+                                                       size="20" 
+                                                       autocomplete="username" 
+                                                       required>
+                                                
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="username">Semestre</label>         
+                                                <input type="number" 
+                                                       name="userename"
+                                                       [(ngModel)]="est.semest"  
+                                                       id="usersem" 
+                                                       size="20" 
+                                                       autocomplete="username" 
+                                                       required>
+                                                  
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="username">Nombre</label>
+                                                    <input type="text" 
+                                                           name="userename"
+                                                           [(ngModel)]="est.nomest" 
+                                                           id="usernom" 
+                                                           size="20" 
+                                                           autocomplete="username" 
+                                                           required>
+                                                    
+                                            </div>
+                                                
+                                            <div class="form-group">
+                                                    <label for="username">Apellido</label>
+                                                    <input type="text" 
+                                                           name="userename"
+                                                           [(ngModel)]="est.apeest"
+                                                           id="userape" 
+                                                           size="20" 
+                                                           autocomplete="username" 
+                                                           required>
+                                                    
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Contraseña</label>
+                                                <input type="password" 
+                                                       name="password" 
+                                                       [(ngModel)]="est.paswest"
+                                                       id="password" 
+                                                       size="20" 
+                                                       autocomplete="current-password" 
+                                                       required>
+                                            
+                                            </div>
+                                           
+                                            <div>
+                                                <button type="submit" class="btn btn-success">
+                                                    <i class="fa fa-save"></i>
+                                                    Registrar Estudiante
+                                                </button>
+                                            </div>
+                                           
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                                <div class="signuppanel">
+                                    <h2>Registrarse como usuario</h2>
+                                    <div class="subcontent">
+                                        <h3>Los requisitos</h3>
+                                        <p>1. El estudiante debe tener aprobado el 75% de la totalidad de los créditos de su plan
+                                            de estudios, incluidos los de formación humanística y competencias básicas. </p>
+                                        <p>2. El estudiante debe estar legalmente matriculado en el periodo académico cuando
+                                            realiza la propuesta.</p>
+                                        <p>3. El estudiante debe cancelar los derechos correspondientes a la inscripción del
+                                            Trabajo de Grado. </p>
+                                        <p>4. El estudiante debe contar con el apoyo de un docente en el rol de asesor</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>          
+                    </section>
+            </div>
+        </div>
+    
+</div>
+        

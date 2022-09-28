@@ -1,0 +1,112 @@
+<div id="page" class="container-fluid   ">
+    
+    <div class="container outercont">
+        <div id="page-content" class="row-fluid">
+            <div id="page-navbar" class="span12">
+                <nav class="breadcrumb-button"></nav>
+                <ul class="breadcrumb">
+                    <i title="Inicio" class="fa fa-folder-open-o fa-lg"></i>
+                    <span class="separator">
+                        <i class="fa-angle-right fa"></i>
+                    </span>
+                    <li>
+                        <span tabindex="0">Iniciar sesión en el sitio</span>
+                    </li>
+                </ul>
+            </div>        
+            <section id="region-main" class="span12">
+                <span class="notifications" id="user-notifications"></span>
+                <div role="main">
+                    <span id="maincontent"></span>
+                    <div class="loginbox clearfix twocolumns">
+                        <div class="loginpanel">
+                            <h2>Actualizar Docente</h2>
+                            <div class="subcontent">
+                                <form (ngSubmit)="guardar( f )"
+                                      #f="ngForm">
+                                    <div class="loginfor">
+                                        <div class="form-group">
+                                            <label for="username">Cedula</label>           
+                                            <input type="number" 
+                                                   name="userdname"
+                                                   [(ngModel)]="doc.iddoc" 
+                                                   id="userced" 
+                                                   size="20"  
+                                                   autocomplete="username"
+                                                   required>
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Codigo</label>         
+                                            <input type="number" 
+                                                   name="userdname"
+                                                   [(ngModel)]="doc.coddoc" 
+                                                   id="usercod" 
+                                                   size="20" 
+                                                   autocomplete="username"
+                                                   required>
+                                             
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="username">Nombre</label>
+                                                <input type="text" 
+                                                       name="userdname"
+                                                       [(ngModel)]="doc.nomdoc" 
+                                                       id="usernom" 
+                                                       size="20" 
+                                                       autocomplete="username"
+                                                       required>
+                                                
+                                        </div>        
+                                        <div class="form-group">
+                                                <label for="username">Apellido</label>
+                                                <input type="text" 
+                                                       name="userdname"
+                                                       [(ngModel)]="doc.apedoc"
+                                                       id="userape" 
+                                                       size="20" 
+                                                       autocomplete="username"
+                                                       required>
+                                                
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cars">Rol:</label>
+                                            <select name="cars" id="option" form="carform" [(ngModel)]="doc.roldoc" >
+                                                <option value="jurado" >Jurado</option>
+                                                <option value="asesor" >asesor</option>                
+                                            </select>  
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Contraseña</label>
+                                                <input type="password" 
+                                                       name="password" 
+                                                       id="password"
+                                                       [(ngModel)]="doc.pawdoc" 
+                                                       size="20" 
+                                                       autocomplete="current-password"
+                                                       required>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fa fa-save"></i>
+                                            Atualizar Docente
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="desc">
+                                    <span class="helptooltip"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signuppanel">
+                           
+                          
+                        </div>
+                    </div>
+                </div>        
+            </section>
+        </div>
+    </div>
+</div>        
