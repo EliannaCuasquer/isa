@@ -11,7 +11,7 @@ import { prdocModel } from '../models/prdoc.model';
 })
 export class ApisqrService {
   
-  readonly url="https://localhost:7175";
+  readonly url="https://localhost:7203";
 
   constructor(private htttp: HttpClient) { }
 

@@ -1,14 +1,24 @@
 using ApiSQR.Models;
 using Microsoft.EntityFrameworkCore;
 
+ var _Mycross = "MyCroos";
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BaseSQRContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-var app = builder.Build();
+builder.Services.AddCors(option => {
+    option.AddPolicy(name: _Mycross, buiilder =>
+    {
+        buiilder.SetIsOriginAllowed(origin => (new Uri(origin).Host == "localhost")).AllowAnyHeader().AllowAnyMethod();
 
+    });
+
+});
+var app = builder.Build();
+app.UseCors(_Mycross);
 app.UseSwagger();
 app.UseSwaggerUI();
+
 
 
 app.MapGet("/Admin", () => {
